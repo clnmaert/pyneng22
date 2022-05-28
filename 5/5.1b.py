@@ -1,4 +1,4 @@
-# Task 5.1a.py
+# Task 5.1b
 london_co = {
     "r1": {
         "location": "21 New Globe Walk",
@@ -24,8 +24,9 @@ london_co = {
         "routing": True
     }
 }
-print(london_co.keys())
-input_device = input('Введите имя устройства\n')
-print(london_co[input_device].keys())
-input_parameter = input('А теперь введите искомый параметр\n')
+params = ', '.join(london_co.keys())
+input_device = input(f'Введите имя устройства ({params}): ')
+params = ', '.join(london_co[input_device].keys())
+input_parameter = input(f'А теперь введите искомый параметр ({params}): ')
 print(london_co[input_device][input_parameter])
+#Сам не решил. Подсмотрел. хер ума дам, что значит вот это params = ', '.join   что это за запятая в скобках такая.
