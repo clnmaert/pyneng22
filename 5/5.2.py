@@ -31,3 +31,4 @@ print(f'{ip[0]:<10}{ip[1]:<10}{ip[2]:<10}{ip[3]:<10}\n'
       f'/{mask}\n'
       f'{int(mask_bin[:8], 2):<10}{int(mask_bin[8:16], 2):<10}{int(mask_bin[16:24], 2):<10}{int(mask_bin[24:], 2):<10}\n'
       f'{mask_bin[:8]}  {mask_bin[8:16]}  {mask_bin[16:24]} {mask_bin[24:]}')
+# мозговая боль
