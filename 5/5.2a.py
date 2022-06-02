@@ -44,10 +44,3 @@ print(f'Network:\n'
       f'/{mask}\n'
       f'{int((mask_bin[:8]), 2):<10}  {int((mask_bin[8:16]), 2):<10}  {int((mask_bin[16:24]), 2):<10}  {int((mask_bin[24:]), 2):<10}\n'
       f'{mask_bin[:8]:08}  {mask_bin[8:16]:08}  {mask_bin[16:24]:08}  {mask_bin[24:]:08}')
-'''
-ip = list(ip.split('.'))
-print(f'{ip[0]:<10}{ip[1]:<10}{ip[2]:<10}{ip[3]:<10}\n'
-      f'{int(ip[0], 10):08b}  {int(ip[1], 10):08b}  {int(ip[2], 10):08b}  {int(ip[3], 10):08b}\n\n'
-      f'/{mask}\n'
-      f'{int(mask_bin[:8], 2):<10}{int(mask_bin[8:16], 2):<10}{int(mask_bin[16:24], 2):<10}{int(mask_bin[24:], 2):<10}\n'
-      f'{mask_bin[:8]}  {mask_bin[8:16]}  {mask_bin[16:24]} {mask_bin[24:]}')'''
