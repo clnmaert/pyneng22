@@ -1,10 +1,13 @@
-#Task 5.3a
-'''Дополнить скрипт из задания 5.3 таким образом, чтобы, в зависимости от выбранного режима, задавались разные вопросы в запросе о номере VLANа или списка VLANов:
+# Task 5.3a
+"""
+Дополнить скрипт из задания 5.3 таким образом, чтобы, в зависимости от выбранного режима, задавались разные вопросы в
+запросе о номере VLANа или списка VLANов:
 
 для access: «Введите номер VLAN:»
 для trunk: «Введите разрешенные VLANы:»
-Ограничение: Все задания надо выполнять используя только пройденные темы. То есть эту задачу можно решить без использования условия if и циклов for/while.
-'''
+Ограничение: Все задания надо выполнять используя только пройденные темы. То есть эту задачу можно решить без
+использования условия if и циклов for/while.
+"""
 
 access_template = [
     "switchport mode access", "switchport access vlan {}",
@@ -18,10 +21,10 @@ trunk_template = [
 ]
 template = {'access': access_template, 'trunk': trunk_template}
 question = {'access': 'Введите номер VLAN: ', 'trunk': 'Введите разрешенные VLANы: '}
-type = input('Введите режим работы интерфейса (access/trunk): ')
+mode = input('Введите режим работы интерфейса (access/trunk): ')
 interface = input('Введите тип и номер интерфейса: ')
-vlans = input(question[type])
+vlans = input(question[mode])
 
 print(f'interface {interface}')
-print('\n'.join(template[type]).format(vlans))
-#подсмотрел ответы. Туго соображал.
+print('\n'.join(template[mode]).format(vlans))
+# В итоге подсмотрел ответы. Туго допирал
