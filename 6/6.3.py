@@ -97,10 +97,13 @@ for intf, vlan in trunk.items():
     for command in trunk_template:
         if command.endswith("allowed vlan"):
             if vlan[0].endswith("add"):
-                print(f" {command} {vlan[0]} {vlan[1:]}")
+                vlans = ",".join(vlan[1:])
+                print(f" {command} {vlan[0]} {vlans}")
             if vlan[0].endswith("only"):
-                print(f" {command} {vlan[0]} {vlan[1:]}")
+                vlans = ",".join(vlan[1:])
+                print(f" {command} {vlan[0]} {vlans}")
             if vlan[0].endswith("del"):
-                print(f" {command} {vlan[0]} {vlan[1:]}")
+                vlans = ",".join(vlan[1:])
+                print(f" {command} {vlan[0]} {vlans}")
         else:
             print(f" {command}")
